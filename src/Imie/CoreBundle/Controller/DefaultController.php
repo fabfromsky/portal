@@ -15,9 +15,9 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        if ($this->getUser()->isStudent())
-            return $this->redirect('delivery');
-        else
-            return $this->redirect('target');
+//        if ($this->getUser()->isStudent())
+//            return $this->redirect('delivery');
+//        else
+//            return $this->redirect('target');
     }
 }

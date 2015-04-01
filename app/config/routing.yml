@@ -1,8 +1,3 @@
-imie_agenda:
-    resource: "@ImieAgendaBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 imie_evaluate:
     resource: "@ImieEvaluateBundle/Controller/"
     type:     annotation

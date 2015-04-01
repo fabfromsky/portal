@@ -8,7 +8,7 @@ imports:
     - { resource: maintenance.yml }
     - { resource: "@ImieCoreBundle/Resources/config/admin.yml" }
 #    - { resource: "@ImieAgendaBundle/Resources/config/admin.yml" }
-    - { resource: "@ImieDeliveryBundle/Resources/config/admin.yml" }
+#    - { resource: "@ImieDeliveryBundle/Resources/config/admin.yml" }
 #    - { resource: "@ImieEvaluateBundle/Resources/config/admin.yml" }
 #    - { resource: "@ImieReportBundle/Resources/config/admin.yml" }
 

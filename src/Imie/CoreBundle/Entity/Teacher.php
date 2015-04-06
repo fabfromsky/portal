@@ -16,7 +16,7 @@ use JMS\Serializer\Annotation as JSON;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Student entity
+ * Teacher entity
  * @ORM\Table(name="pi_teacher")
  * @ORM\Entity(repositoryClass="Imie\CoreBundle\Repository\TeacherRepository")
  * @JSON\ExclusionPolicy("ALL")

@@ -32,8 +32,17 @@ class Course
      * @var unknown
      */
     protected $exams;
+    
+    
     /**
      * 
+     */
+    public function setId($id) {
+    	$this->id = $id;
+    }
+    
+    /**
+     *
      * @return \Imie\EvaluateBundle\Entities\int
      */
     public function getId() {
@@ -43,44 +52,40 @@ class Course
     /**
      * 
      */
-    public function setId() {
-    	$this->id = $id;
+    public function setName($name) {
+    	$this->name = $name;
     }
     
     /**
-     * 
+     *
      * @return \Imie\EvaluateBundle\Entities\String
      */
     public function getName() {
     	return $this->name;
     }
     
-    /**
-     * 
-     */
-    public function setName() {
-    	$this->name = $name;
-    }
     
-    
-    /**
-     * 
-     * @param Imie\EvaluateBundle\Entity\Exam $exams
-     * @return \Imie\EvaluateBundle\Entity\Course
+/**
+     * Add exams
+     *
+     * @param \Imie\EvaluateBundle\Entity\Exam $exams
+     * @return Exam
      */
-    public function setExams(Imie\EvaluateBundle\Entity\Exam $exams = null) {
-    	$this->exams = $exams;
-    	
-    	return $this;
-    }
-    
-    /**
-     * 
-     * @return \Imie\EvaluateBundle\Entity\unknown
-     */
-    public function getExams()
+    public function addExams(\Imie\EvaluateBundle\Entity\Exam $exams)
     {
-    	return $this->exams;
+        $this->exams[] = $exams;
+
+        return $this;
+    }
+
+    /**
+     * Remove exams
+     *
+     * @param \Imie\EvaluateBundle\Entity\Exam $exams
+     */
+    public function removeExams(\Imie\EvaluateBundle\Entity\Exam $exams)
+    {
+        $this->exams->removeElement($exams);
     }
 
 }

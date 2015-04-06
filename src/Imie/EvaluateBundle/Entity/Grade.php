@@ -45,6 +45,13 @@ class Grade
      * @var unknown
      */
     protected $exam;
+
+    /**
+     *
+     */
+    public function setId($id) {
+    	$this->id = $id;
+    }
     
     /**
      * 
@@ -53,41 +60,29 @@ class Grade
     public function getId() {
     	return $this->id;
     }
-    
-    /**
-     * 
-     */
-    public function setId() {
-    	$this->id = $id;
-    }
-    
-    /**
-     * 
-     * @return \Imie\EvaluateBundle\Entities\decimal
-     */
-    public function getGradevalue() {
-    	return $this->gradevalue;
-    }
-    /**
-     * 
-     */
-    public function setValue() {
-    	$this->gradevalue = $gradevalue;
-    }
 
+    
     /**
      * Set gradevalue
      *
      * @param \double $gradevalue
      * @return Grade
      */
-    public function setGradevalue(\double $gradevalue)
+    public function setGradevalue($gradevalue)
     {
         $this->gradevalue = $gradevalue;
 
         return $this;
     }
 
+    /**
+     *
+     * @return \Imie\EvaluateBundle\Entities\decimal
+     */
+    public function getGradevalue() {
+    	return $this->gradevalue;
+    }
+    
     /**
      * Set student
      *

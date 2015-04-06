@@ -67,6 +67,15 @@ class Exam
      * @ORM\OneToMany(targetEntity="Imie\EvaluateBundle\Entity\Grade", mappedBy="exam")
      */
     protected $grades;
+    
+    
+    /**
+     * 
+     */
+    public function setId($id) {
+    	$this->id = $id;
+    }
+    
     /**
      *
      * @return \Imie\EvaluateBundle\Entities\int
@@ -78,8 +87,8 @@ class Exam
     /**
      * 
      */
-    public function setId() {
-    	$this->id = $id;
+    public function setName($name) {
+    	$this->name = $name;
     }
     
    	/**
@@ -89,12 +98,13 @@ class Exam
     public function getName() {
     	return $this->name;
     }
-    
+
     /**
-     * 
+     *
+     *
      */
-    public function setName() {
-    	$this->name = $name;
+    public function setCoef($coef) {
+    	$this->coef = $coef;
     }
     
     /**
@@ -105,14 +115,6 @@ class Exam
     	return $this->coef;
     }
     
-    /**
-     * 
-     * 
-     */
-    public function setCoef() {
-    	$this->coef = $coef;
-    }
-
     /**
      * Set teacher
      *

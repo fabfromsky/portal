@@ -31,7 +31,7 @@ class LoadTeacherData extends UserAbstractFicture
         $admin = array( User::ROLE_DEFAULT, User::ROLE_API );
 
         $this->userManager->updateUser(
-            $this->makeTeacher(
+            $teacher1 = $this->makeTeacher(
                 "Mickael",
                 "Gaillard",
                 "mickael.gaillard@tactfactory.com",
@@ -41,7 +41,7 @@ class LoadTeacherData extends UserAbstractFicture
                 1), true);
 
         $this->userManager->updateUser(
-            $this->makeTeacher(
+            $teacher2 = $this->makeTeacher(
                 "Yoan",
                 "Pintas",
                 "yoan.pintas@tactfactory.com",
@@ -51,7 +51,7 @@ class LoadTeacherData extends UserAbstractFicture
                 2), true);
 
         $this->userManager->updateUser(
-            $this->makeTeacher(
+            $teacher3 = $this->makeTeacher(
                 "Denis",
                 "",
                 "denis@imie-rennes.com",
@@ -61,7 +61,7 @@ class LoadTeacherData extends UserAbstractFicture
                 3), true);
 
         $this->userManager->updateUser(
-            $this->makeTeacher(
+            $teacher4 = $this->makeTeacher(
                 "Serge",
                 "",
                 "serge@imie-rennes.com",
@@ -71,7 +71,7 @@ class LoadTeacherData extends UserAbstractFicture
                 4), true);
 
         $this->userManager->updateUser(
-            $this->makeTeacher(
+            $teacher5 =$this->makeTeacher(
                 "Celia",
                 "",
                 "celia@imie-rennes.com",
@@ -81,7 +81,7 @@ class LoadTeacherData extends UserAbstractFicture
                 5), true);
 
         $this->userManager->updateUser(
-            $this->makeTeacher(
+            $teacher6 = $this->makeTeacher(
                 "Sophie",
                 "",
                 "sophie@imie-rennes.com",
@@ -89,6 +89,14 @@ class LoadTeacherData extends UserAbstractFicture
                 UserInterface::GENDER_FEMALE,
                 $admin,
                 6), true);
+        
+        
+        $this->addReference('teacher-1', $teacher1);
+        $this->addReference('teacher-2', $teacher2);
+        $this->addReference('teacher-3', $teacher3);
+        $this->addReference('teacher-4', $teacher4);
+        $this->addReference('teacher-5', $teacher5);
+        $this->addReference('teacher-6', $teacher6);
     }
 
     /**

@@ -42,7 +42,7 @@ class LoadCourseData extends AbstractFixture implements OrderedFixtureInterface
   }
   
   public function getOrder() {
-    return 2;
+    return 1;
     
     // the order in which fixtures will be loaded
     

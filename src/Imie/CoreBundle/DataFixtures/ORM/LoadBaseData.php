@@ -53,6 +53,11 @@ class LoadBaseData extends AbstractFixture implements ContainerAwareInterface, O
         $student12 = $this->makeUser('Damien', 'Le Pestipon', 'lepestipon.damien@gmail.com', 'M', 'CDPN (M1)');
 
         $this->manager->flush();
+        
+        $this->addReference('student-1', $student01);
+        $this->addReference('student-2', $student02);
+        $this->addReference('student-3', $student03);
+        $this->addReference('student-4', $student04);
     }
 
 

@@ -5,6 +5,7 @@ namespace Imie\EvaluateBundle\Entity;
 use Imie\CoreBundle\Entity\Student;
 use Imie\EvaluateBundle\Entity\Exam;
 use Doctrine\ORM\Mapping as ORM;
+use Imie\EvaluateBundle\ImieEvaluateBundle;
 /**
  * entity grade
  * @ORM\Entity
@@ -42,7 +43,7 @@ class Grade
     /**
      * @ORM\ManyToOne(targetEntity="Imie\EvaluateBundle\Entity\Exam", inversedBy="grades")
      * @ORM\JoinColumn(name="exam_id", referencedColumnName="id")
-     * @var unknown
+     * @var Imie\EvaluateBundle\Entity\Exam
      */
     protected $exam;
 
@@ -106,7 +107,7 @@ class Grade
         return $this->student;
     }
     
-    public function setExam(\Imie\EvaluateBundle\Entity $exam = null)
+    public function setExam(\Imie\EvaluateBundle\Entity\Exam $exam = null)
     {
     	$this->exam = $exam;
     	
